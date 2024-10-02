@@ -7,6 +7,7 @@ import '../../../common/widgets/button/basic_app_button.dart';
 import '../../../core/config/assets/app_images.dart';
 import '../../../core/config/assets/app_vectors.dart';
 import '../../../core/config/theme/app_colors.dart';
+import '../../auth/pages/signup_or_siginin.dart';
 
 class ChooseModePage extends StatefulWidget {
   ChooseModePage({super.key});
@@ -38,7 +39,7 @@ class _ChooseModePageState extends State<ChooseModePage> {
             color: Colors.black.withOpacity(0.15),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 40),
+            padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 40),
             child: Column(
               children: [
                 Align(
@@ -152,12 +153,10 @@ class _ChooseModePageState extends State<ChooseModePage> {
                 ),
                 BasicAppButton(
                     onPressed: () {
-                      //  Navigator.push(
-                      //    context,
-                      //    MaterialPageRoute(
-                      //      builder: (BuildContext context) => const SignupOrSigninPage()
-                      //    )
-                      // );
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (BuildContext context) => const SignUpOrSignInPage()));
                     },
                     title: 'Continue')
               ],
