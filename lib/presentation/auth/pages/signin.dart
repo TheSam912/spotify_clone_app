@@ -24,11 +24,11 @@ class SigninPage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
+        padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            _registerText(),
+            _SingInText(),
             const SizedBox(
               height: 50,
             ),
@@ -125,7 +125,7 @@ class SigninPage extends StatelessWidget {
     );
   }
 
-  Widget _registerText() {
+  Widget _SingInText() {
     return const Text(
       'Sign In',
       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),

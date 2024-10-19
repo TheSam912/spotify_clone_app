@@ -25,7 +25,7 @@ class SignupPage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 30),
+        padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -84,26 +84,50 @@ class SignupPage extends StatelessWidget {
   }
 
   Widget _fullNameField(BuildContext context) {
-    return TextField(
-      controller: _fullName,
-      decoration: const InputDecoration(hintText: 'Full Name')
-          .applyDefaults(Theme.of(context).inputDecorationTheme),
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey), borderRadius: BorderRadius.circular(25)),
+      child: TextField(
+        controller: _fullName,
+        decoration: const InputDecoration(
+                hintText: 'Enter Full Name',
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none)
+            .applyDefaults(Theme.of(context).inputDecorationTheme),
+      ),
     );
   }
 
   Widget _emailField(BuildContext context) {
-    return TextField(
-      controller: _email,
-      decoration: const InputDecoration(hintText: 'Enter Email')
-          .applyDefaults(Theme.of(context).inputDecorationTheme),
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey), borderRadius: BorderRadius.circular(25)),
+      child: TextField(
+        controller: _email,
+        decoration: const InputDecoration(
+                hintText: 'Enter Email',
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none)
+            .applyDefaults(Theme.of(context).inputDecorationTheme),
+      ),
     );
   }
 
   Widget _passwordField(BuildContext context) {
-    return TextField(
-      controller: _password,
-      decoration: const InputDecoration(hintText: 'Password')
-          .applyDefaults(Theme.of(context).inputDecorationTheme),
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
+      decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey), borderRadius: BorderRadius.circular(25)),
+      child: TextField(
+        controller: _password,
+        decoration: const InputDecoration(
+                hintText: 'Enter Password',
+                hintStyle: TextStyle(color: Colors.grey),
+                border: InputBorder.none)
+            .applyDefaults(Theme.of(context).inputDecorationTheme),
+      ),
     );
   }
 
